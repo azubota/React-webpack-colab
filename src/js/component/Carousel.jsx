@@ -1,29 +1,23 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 export class Carousel extends React.Component {
+	makeActive(tag){
+		if (tag === "activeSlide"){
+			return "active";
+		}
+		else {
+			return "";
+		}
+	}
 	render() {
 		return (
 			<div
-				id="carouselExampleIndicators"
+				id="carouselExampleControls"
 				className="carousel slide"
 				data-ride="carousel">
-				<ol className="carousel-indicators">
-					<li
-						data-target="#carouselExampleIndicators"
-						data-slide-to="0"
-						className="active"
-					/>
-					<li
-						data-target="#carouselExampleIndicators"
-						data-slide-to="1"
-					/>
-					<li
-						data-target="#carouselExampleIndicators"
-						data-slide-to="2"
-					/>
-				</ol>
 				<div className="carousel-inner">
-					<div className="carousel-item active">
+					<div className="carousel-item">
 						<img
 							className="d-block w-100"
 							src="http://placehold.it/250x100"
@@ -47,7 +41,7 @@ export class Carousel extends React.Component {
 				</div>
 				<a
 					className="carousel-control-prev"
-					href="#carouselExampleIndicators"
+					href="#carouselExampleControls"
 					role="button"
 					data-slide="prev">
 					<span
@@ -58,7 +52,7 @@ export class Carousel extends React.Component {
 				</a>
 				<a
 					className="carousel-control-next"
-					href="#carouselExampleIndicators"
+					href="#carouselExampleControls"
 					role="button"
 					data-slide="next">
 					<span
@@ -68,6 +62,7 @@ export class Carousel extends React.Component {
 					<span className="sr-only">Next</span>
 				</a>
 			</div>
+			
 		);
 	}
 }
