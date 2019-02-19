@@ -3,7 +3,9 @@ import React from "react";
 export class Cards extends React.Component {
 	render() {
 		return (
-			<div className="main">
+			<div
+				className="main
+			">
 				<div className="row mb-5 pb-5">
 					<div className="col-7 card-text my-5 py-5">
 						<h1 className="card-title">
