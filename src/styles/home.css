@@ -7,12 +7,6 @@
     padding: 4px;
 }
 
-.left {
-    
-}
-
-.right {
-    margin-left: 1000px;
-    
-    
+.Box{
+    background: lightgray;
 }

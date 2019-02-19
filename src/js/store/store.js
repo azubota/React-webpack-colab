@@ -170,6 +170,13 @@ const getState = ({ getStore, setStore }) => {
 					price: 129.99
 				}
 			],
+			favorites: [
+				{
+					title: " ",
+					content: " ",
+					image: " "
+				}
+			],
 			demo: [
 				{
 					title: "FIRST",
@@ -185,6 +192,12 @@ const getState = ({ getStore, setStore }) => {
 			thingy: "THINGY"
 		},
 		actions: {
+			addToFavorites: post => {
+				const store = getStore();
+				let tempFav = store.favorites;
+				tempFav.push(post);
+				setStore({ favorites: tempFav });
+			},
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
