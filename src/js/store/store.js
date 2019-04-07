@@ -12,7 +12,13 @@ const getState = ({ getStore, setStore }) => {
 					image:
 						"https://venturebeat.com/wp-content/uploads/2015/09/Screen-Shot-2015-09-03-at-13.43.14-e1441259794560.png",
 					thumbnail:
-						"https://media.takealot.com/covers_tsins/50045787/50045787-1-listgrid.jpg"
+						"https://media.takealot.com/covers_tsins/50045787/50045787-1-listgrid.jpg",
+					question:"",
+					options:["", "", ""],
+					correctAnswer: "",
+					hint: "",
+					
+					category:[]
 				},
 				{
 					title: "This is a Design Post",

@@ -67,42 +67,42 @@ export class Home extends React.Component {
 						<span className="sr-only">Next</span>
 					</a>
 				</div>
-				<div className="row d-flex justify-content-center">
-					<Context.Consumer>
-						{({ store }) => {
-							return store.posts.map((item, index) => {
-								return (
-									<Cardsround
-										key={index}
-										src={item.image}
-										content={item.description}
-										title={item.name}
-									/>
-								);
-							});
-						}}
-					</Context.Consumer>
-				</div>
-				<div className="main">
-					<div className="row mb-5 pb-5">
+				<div>
+					<div className="row justify-content-center">
 						<Context.Consumer>
-							{({ store, actions }) => {
+							{({ store }) => {
 								return store.posts.map((item, index) => {
 									return (
-										<Cards
+										<Cardsround
 											key={index}
 											src={item.image}
-											content={item.content}
-											title={item.title}
-											onClick={() =>
-												actions.addToFavorites(item)
-											}
+											content={item.description}
+											title={item.name}
 										/>
 									);
 								});
 							}}
 						</Context.Consumer>
 					</div>
+				</div>
+				<div className="row">
+					<Context.Consumer>
+						{({ store, actions }) => {
+							return store.posts.map((item, index) => {
+								return (
+									<Cards
+										key={index}
+										src={item.image}
+										content={item.content}
+										title={item.title}
+										onClick={() =>
+											actions.addToFavorites(item)
+										}
+									/>
+								);
+							});
+						}}
+					</Context.Consumer>
 				</div>
 			</div>
 		);

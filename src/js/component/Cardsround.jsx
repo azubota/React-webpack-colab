@@ -4,8 +4,8 @@ import PropTypes from "prop-types";
 export class Cardsround extends React.Component {
 	render() {
 		return (
-			<div className="main my-5 text-center">
-				<div className="col-md-4 text-secondary mb-5">
+			<div className="main text-center">
+				<div className="text-secondary mb-5">
 					<img
 						className="rounded-circle py-0"
 						src={this.props.src}
