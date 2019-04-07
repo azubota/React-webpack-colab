@@ -67,24 +67,23 @@ export class Home extends React.Component {
 						<span className="sr-only">Next</span>
 					</a>
 				</div>
-				<div>
-					<div className="row justify-content-center">
-						<Context.Consumer>
-							{({ store }) => {
-								return store.posts.map((item, index) => {
-									return (
-										<Cardsround
-											key={index}
-											src={item.image}
-											content={item.description}
-											title={item.name}
-										/>
-									);
-								});
-							}}
-						</Context.Consumer>
-					</div>
+				<div className="row d-flex justify-content-center">
+					<Context.Consumer>
+						{({ store }) => {
+							return store.posts.map((item, index) => {
+								return (
+									<Cardsround
+										key={index}
+										src={item.image}
+										content={item.description}
+										title={item.name}
+									/>
+								);
+							});
+						}}
+					</Context.Consumer>
 				</div>
+				<div className="main">
 				<div className="row">
 					<Context.Consumer>
 						{({ store, actions }) => {
@@ -104,7 +103,8 @@ export class Home extends React.Component {
 						}}
 					</Context.Consumer>
 				</div>
-			</div>
+				</div>
+				</div>
 		);
 	}
 }
