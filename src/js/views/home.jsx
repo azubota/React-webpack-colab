@@ -84,27 +84,27 @@ export class Home extends React.Component {
 					</Context.Consumer>
 				</div>
 				<div className="main">
-				<div className="row">
-					<Context.Consumer>
-						{({ store, actions }) => {
-							return store.posts.map((item, index) => {
-								return (
-									<Cards
-										key={index}
-										src={item.image}
-										content={item.content}
-										title={item.title}
-										onClick={() =>
-											actions.addToFavorites(item)
-										}
-									/>
-								);
-							});
-						}}
-					</Context.Consumer>
+					<div className="row">
+						<Context.Consumer>
+							{({ store, actions }) => {
+								return store.posts.map((item, index) => {
+									return (
+										<Cards
+											key={index}
+											src={item.image}
+											content={item.content}
+											title={item.title}
+											onClick={() =>
+												actions.addToFavorites(item)
+											}
+										/>
+									);
+								});
+							}}
+						</Context.Consumer>
+					</div>
 				</div>
-				</div>
-				</div>
+			</div>
 		);
 	}
 }

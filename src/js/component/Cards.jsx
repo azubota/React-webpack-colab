@@ -51,7 +51,6 @@ export class Cards extends React.Component {
 	}
 }
 
-
 Cards.propTypes = {
 	title: PropTypes.string,
 	src: PropTypes.string,
